@@ -10,6 +10,7 @@
 | 03  |   | [제일작은수제거하기](./programmers/제일작은수제거하기/README.md)   |      |
 | 04  | 3 | [입국심사](./programmers/입국심사/README.md)   |      |
 | 05  | 2 | [큰수만들기](./programmers/큰수만들기/README.md)   |      |
+| 06  | 2 | [다리를지나는트럭](./programmers/다리를지나는트럭/README.md)   |      |
 
 
 ## Data Structure
