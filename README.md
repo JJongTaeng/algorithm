@@ -7,7 +7,8 @@
 | :-: | :-: | :------------------------------------------- | :--- |
 | 01  |     | [수박수박수박수박수](./programmers/수박/README.md)     |      |
 | 02  |     | [올바른괄호](./programmers/올바른괄호/README.md)   |      |
-| 02  |     | [제일작은수제거하기](./programmers/제일작은수제거하기/README.md)   |      |
+| 03  |     | [제일작은수제거하기](./programmers/제일작은수제거하기/README.md)   |      |
+| 04  |     | [입국심사](./programmers/입국심사/README.md)   |      |
 
 
 ## Data Structure
@@ -227,7 +228,7 @@ class Queue {
 ```
 
 #### 구현(연결리스트)
-```javascript
+```typescript
 class _Node {
     value: any;
     next?: _Node;
