@@ -14,9 +14,9 @@
 
 ## Data Structure
 
-|  #  | :-: | :------------------------------------------- |
-| :-: | :-: | :------------------------------------------- |
+|  #  | :-: | 자료구조 이름 |
+| :-: | :-: | :--------- |
 | 01  |   | [힙](./datastructure/heap/README.md)     |
-| 02  |   | [링크드리스트](./datastructure/heap/README.md)     |
+| 02  |   | [링크드리스트](./datastructure/linked-list/README.md)     |
 | 03  |   | [트라이](./datastructure/trie/README.md)     |
 | 04  |   | [큐](./datastructure/queue/README.md)     |
