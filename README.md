@@ -21,3 +21,9 @@
 | 02  |   | [링크드리스트](./datastructure/linked-list/README.md)     |
 | 03  |   | [트라이](./datastructure/trie/README.md)     |
 | 04  |   | [큐](./datastructure/queue/README.md)     |
+
+## Algorithm
+
+|  #  | :-: | 알고리즘 이름 |
+| :-: | :-: | :-------------------------------------   |
+| 01  |   | [에라토네스체](./algorithm/에라토네스체/README.md)     |
