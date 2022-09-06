@@ -2,7 +2,7 @@
 
 - FIFO 큐와 달리 우선순위가 높은 요소가 먼저 나가는 큐
 - 우선순위 큐는 자료구조가 아닌 개념
-- 이진 트리 형태를 가지며 우선순위가 높은 요소가 먼저 나가기 위해 요소가 삽입, 삭제 될 때 정렬이 되는 특성이 있음
+- **이진 트리 형태**를 가지며 우선순위가 높은 요소가 먼저 나가기 위해 요소가 삽입, 삭제 될 때 정렬이 되는 특성이 있음
 
 - 우선순위 큐와 힙은 같은 것이 아님.
 - 우선순위 큐를 배열로도 구현할 수 있음
@@ -36,10 +36,10 @@ class MaxHeap {
     let parentIndex = Math.floor(currentIndex / 2); // 부모 정점의 배열 인덱스
 
     while(parentIndex !== 0 && this.heap[parentIndex] < value) { // 부모 정점이 더 작으면 반복
-      const temp = this.heap[parentIndex];
+      const parentValue = this.heap[parentIndex];
 
       this.heap[parentIndex] = value; // 부모와
-      this.heap[currentIndex] = temp; // 자식의 위치를 바꾸고
+      this.heap[currentIndex] = parentValue; // 자식의 위치를 바꾸고
 
       currentIndex = parentIndex; // 현재 인덱스와 부모 인덱스를 바꿈
       parentIndex = Math.floor(currentIndex / 2);
