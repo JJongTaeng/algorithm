@@ -89,3 +89,6 @@ list.remove(12);
 console.log(list)
 console.log(list.find(11));
 ```
+
+
+[🏠 홈으로](/README.md) 

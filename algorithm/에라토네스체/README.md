@@ -17,3 +17,5 @@ function get_primes(num) {
     .filter(index => index);
 }
 ```
+
+[🏠 홈으로](/README.md) 
