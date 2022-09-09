@@ -28,53 +28,67 @@
 class MaxHeap {
   constructor() {
     this.heap = [null];
+    this.size = 0;
   }
 
   push(value) {
     this.heap.push(value);
-    let currentIndex = this.heap.length - 1; // 추가된 정점의 배열 인덱스
-    let parentIndex = Math.floor(currentIndex / 2); // 부모 정점의 배열 인덱스
 
-    while(parentIndex !== 0 && this.heap[parentIndex] < value) { // 부모 정점이 더 작으면 반복
+    let currentIndex = this.heap.length - 1;
+    let parentIndex = Math.floor(currentIndex / 2);
+
+    while(parentIndex !== 0 && this.heap[parentIndex] < value) {
       const parentValue = this.heap[parentIndex];
+      this.heap[parentIndex] = this.heap[currentIndex];
+      this.heap[currentIndex] = parentValue;
 
-      this.heap[parentIndex] = value; // 부모와
-      this.heap[currentIndex] = parentValue; // 자식의 위치를 바꾸고
-
-      currentIndex = parentIndex; // 현재 인덱스와 부모 인덱스를 바꿈
+      currentIndex = parentIndex;
       parentIndex = Math.floor(currentIndex / 2);
     }
+    this.size += 1;
   }
 
   pop() {
-    const returnValue = this.heap[1]; // 임시로 루트 정점(상수) 저장
-    this.heap[1] = this.heap.pop(); // 마지막 요소를 루트의 요소와 변경
+    if(this.heap.length === 1) {
+      return;
+    } else if(this.heap.length === 2) {
+      this.size -= 1;
+      return this.heap.pop();
+    }
+    const returnValue = this.heap[1];
+    this.heap[1] = this.heap.pop();
 
     let currentIndex = 1;
-    let leftIndex = 2; // 루트 이진 트리 좌측 자식 정점 인덱스
-    let rightIndex = 3; // 루트 이진 트리 우측 자식 정점 인덱스
+    let leftIndex = 2;
+    let rightIndex = 3;
 
-    while( // 부모정점이 하위 정점보다 우선 순위가 낮을 때 반복 
-    this.heap[currentIndex] < this.heap[leftIndex] ||
-    this.heap[currentIndex] < this.heap[rightIndex]
+    while(
+      this.heap[currentIndex] < this.heap[leftIndex] ||
+      this.heap[currentIndex] < this.heap[rightIndex]
       ) {
       if(this.heap[leftIndex] < this.heap[rightIndex]) {
-        const temp = this.heap[currentIndex];
-        this.heap[currentIndex] = this.heap[rightIndex];
-        this.heap[rightIndex] = temp;
-        currentIndex = rightIndex; // 인덱스 교환
+        const rightValue = this.heap[rightIndex];
+        this.heap[rightIndex] = this.heap[currentIndex];
+        this.heap[currentIndex] = rightValue;
+
+        currentIndex = rightIndex;
       } else {
-        const temp = this.heap[currentIndex];
-        this.heap[currentIndex] = this.heap[leftIndex];
-        this.heap[leftIndex] = temp;
+        const leftValue = this.heap[leftIndex];
+        this.heap[leftIndex] = this.heap[currentIndex];
+        this.heap[currentIndex] = leftValue;
+
         currentIndex = leftIndex;
       }
 
       leftIndex = currentIndex * 2;
-      rightIndex = currentIndex * 2 + 1;
+      rightnIndex = currentIndex * 2 + 1;
     }
-
+    this.size -= 1;
     return returnValue;
+  }
+
+  isEmpty() {
+    return this.size === 0;
   }
 }
 ```
