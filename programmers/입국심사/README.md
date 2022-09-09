@@ -20,3 +20,5 @@ function solution(n, times) {
     return minMinute;
 }
 ```
+
+[🏠 홈으로](/README.md) 
