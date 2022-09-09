@@ -13,8 +13,6 @@
 - 목적에 따라 알고리즘을 선택할 수 있다.
 
 ## 다익스트라가 사용되는 경우
-<img src="https://images.velog.io/images/junhok82/post/86c70a06-e638-41b6-896b-f02dfec6695c/image.png" width="240px" />
-
 - 간선의 가중치가 있는 경우
 - BFS, DFS는 그래프의 간선 가중치가 모두 같을 때 적합하다.
   - 2차원 배열(지도) 입력이 주어진 상태로 최단 거리를 찾아야 한다면 BFS, DFS로 푸는 경우가 많다.
