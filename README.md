@@ -29,5 +29,5 @@
 | 01  |   | [에라토네스체](./algorithm/에라토네스체/README.md)     | ✅ | 
 | 02  |   | [Union-Find](./algorithm/Union-Find/README.md)     | ❌ |
 | 03  |   | [크루스칼](./algorithm/크루스칼/README.md)     | ❌ |
-| 04  |   | [다익스트라](./algorithm/다익스트라/README.md)     | ❌ |
+| 04  |   | [다익스트라](./algorithm/다익스트라/README.md)     | ✅ |
 | 05  |   | [BFS](./algorithm/BFS/README.md)     | ❌ |
