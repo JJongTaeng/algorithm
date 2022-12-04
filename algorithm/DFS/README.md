@@ -1,6 +1,7 @@
-- 너비 우선 탐색 (BFS)
-- 그래프 탐색 알고리즘
-- 같은 깊이의 정점부터 탐색하는 알고리즘
+- 그래프 탐색 알고리즘으로 최대한 깊은 정점부터 탐색하는 알고리즘
+- Stack을 이용해서 구현할 수 있음.
+- 시작 정점에서 깊은 것 부터 찾는다.
+- V가 정점의 수 E가 간선의 수일 때 DFS의 시간복잡도는 O(V+E)
 
 ```javascript
 
@@ -8,7 +9,7 @@ function solution(n, edge) {
 
   const graph = [];
   const visited = [];
-  const queue = [1];
+  const stack = [1];
   for(let i = 1; i <= n; i++) {
     graph[i] = [];
     visited[i] = 0;
@@ -22,12 +23,12 @@ function solution(n, edge) {
 
   visited[1] = 1;
 
-  while(queue.length > 0) {
-    const current = queue.shift();
+  while(stack.length > 0) {
+    const current = stack.pop();
     console.log(current);
     for(const next of graph[current]) {
       if(visited[next] === 0) {
-        queue.push(next);
+        stack.push(next);
         visited[next] = 1;
       }
     }
